@@ -4,6 +4,9 @@
 # npm
 node_modules
 
+# Sass
+.sass-cache
+
 # bourbon/neat
 bourbon
 neat
