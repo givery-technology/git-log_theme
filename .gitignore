@@ -1,1 +1,13 @@
-.sass-cache
+# Mac OS X
+.DS_Store
+
+# npm
+node_modules
+
+# bourbon/neat
+bourbon
+neat
+
+# Compile File
+css
+script
