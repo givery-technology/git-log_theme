@@ -4,25 +4,20 @@ plumber = require 'gulp-plumber'
 
 # Use Sass/Compass
 sass = require 'gulp-ruby-sass'
-compass = require 'gulp-compass'
 sourcemaps = require 'gulp-sourcemaps'
 pleeease = require 'gulp-pleeease'
 
 # Use CoffeeScript
 coffee = require 'gulp-coffee'
 
-# Use Notice
-notify = require "gulp-notify"
-
 # File Path
 paths =
   style:
     src: './sass/{,*/}*.scss'
-    sass: "./sass/"
-    css: './css/'
+    css: './'
   script:
-    coffee: 'app/coffee/{,*/}*.coffee'
-    js: 'app/script/'
+    coffee: './coffee/{,*/}*.coffee'
+    js: './script/'
 
 
 # Webサーバー
@@ -32,11 +27,6 @@ gulp.task 'webserver', ->
       livereload: true
       port: 3000
       # directoryListing: true
-    .pipe notify
-      title: "Gulp"
-      message: "Start WebServer http://localhost:3000/"
-      wait: true
-      sound: "Glass"
 
 
 # Sass Compile
@@ -47,14 +37,13 @@ gulp.task 'sass', ->
   sass('./sass/style.scss', {
     style: 'expanded'
     sourcemap: true
-    compass: true
+    require: ['bourbon', 'neat']
   })
   .on('error', (err) ->
-    console.log 'err'
     console.error('Error', err.message)
   )
   .pipe sourcemaps.write()
-  .pipe gulp.dest(paths.style.dest)
+  .pipe gulp.dest(paths.style.css)
 
 
 # CoffeeScript Compile
@@ -63,11 +52,6 @@ gulp.task 'coffee', () ->
     .pipe plumber()
     .pipe coffee()
     .pipe gulp.dest(paths.script.js)
-    .pipe notify
-      title: "Gulp"
-      message: "Finish Coffee Compile"
-      wait: true
-      sound: "Glass"
 
 # Watch task
 gulp.task 'watch', ->

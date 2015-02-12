@@ -8,8 +8,8 @@ node_modules
 .sass-cache
 
 # bourbon/neat
-bourbon
-neat
+sass/bourbon
+sass/neat
 
 # Compile File
 css
