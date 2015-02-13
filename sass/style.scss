@@ -5,22 +5,24 @@
 @import "neat";
 
 // Setting Colors
-$black: #2c2c2c;
+$black: #3c3c3c;
 $gray: #949494;
 $white: #ffffff;
 $mainColor: #4f7bbe;
 $subColor: #3263a5;
 
-// Setting FontSize
+// Setting Font
 $h2Size: 25px;
 $textSizeL: 18px;
 $textSize: 15px;
 $textSizeS: 13px;
+$font: Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 
 // Default Setting
 html{
   color: $black;
   font-size: $textSize;
+  font-family: $font;
   a{
     color: $mainColor;
   }
@@ -221,6 +223,64 @@ header{
           height: auto;
         }
       }
+    }
+  }
+}
+
+// Fotter Style
+.footer{
+  width: 100%;
+  margin-top: 50px;
+  background-color: $black;
+  color: $white;
+  &__wrapper{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    .copy{
+      width: 100%;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  }
+  &__info{
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding-top: 50px;
+    @include clearfix;
+    li{
+      float: left;
+      width: 25%;
+      text-align: center;
+      list-style-type: none;
+      a{
+        display: inline-block;
+        width: 100%;
+        color: $white;
+        text-decoration: none;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  &__mission{
+    width: 100%;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: $h2Size;
+    font-weight: bold;
+    text-shadow: 0 0px 3px #2c2c2c;
+    color: $gray;
+  }
+  &__logo{
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+    img{
+      width: 60px;
+      height: auto;
     }
   }
 }
