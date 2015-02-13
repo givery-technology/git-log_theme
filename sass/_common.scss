@@ -1,0 +1,196 @@
+// Setting Colors
+$black: #3c3c3c;
+$gray: #949494;
+$white: #ffffff;
+$mainColor: #4f7bbe;
+$subColor: #3263a5;
+
+// Setting Font
+$h2Size: 25px;
+$h3Size: 22px;
+$textSizeL: 20px;
+$textSize: 17px;
+$textSizeS: 13px;
+$font: Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+// Default Setting
+html{
+  color: $black;
+  font-size: $textSize;
+  font-family: $font;
+  a{
+    color: $mainColor;
+  }
+}
+
+// Header Style
+header{
+  @include outer-container(100%);
+  border-top: solid 5px $mainColor;
+}
+.header{
+  @include outer-container(1200px);
+  margin-top: 10px;
+  height: 100px;
+  margin-bottom: 50px;
+  &__logo{
+    @include span-columns(7);
+    a{
+      img{
+        width: auto;
+        height: 100px;
+      }
+    }
+  }
+  &__side{
+    @include span-columns(5);
+    height: 100px;
+    line-height: 100px;
+    text-align: right;
+    li{
+      display: inline-block;
+      list-style-type: none;
+      margin-left: 30px;
+      a{
+        display: inline-block;
+        width: 130px;
+        height: 50px;
+        line-height: 50px;
+        color: $mainColor;
+        text-decoration: none;
+        text-align: center;
+        transition: all 0.3s;
+        &:hover{
+          color: $white;
+          background-color: $mainColor;
+        }
+      }
+    }
+  }
+}
+
+.wrapper{
+  @include outer-container(1200px);
+  .sidebar{
+    @include span-columns(3);
+    &__contents{
+      margin-bottom: 30px;
+      padding: 10px;
+      border: solid 1px $gray;
+      h4{
+        font-size: $textSizeL;
+        text-align: center;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: solid 1px $gray;
+      }
+      ol,ul{
+        li{
+          list-style-position: inside;
+          list-style-type: none;
+        }
+      }
+      &__recommend{
+        li{
+          margin-bottom: 10px;
+          padding-bottom: 10px;
+          border-bottom: solid 1px $gray;
+          &:last-child{
+            border: none;
+          }
+          a{
+            display: inline-block;
+            transition: all 0.3s;
+            opacity: 1;
+            &:hover{
+              opacity: 0.7;
+            }
+            .thumbnail{
+              margin-bottom: 5px;
+              img{
+                width: 100%;
+                height: auto;
+              }
+            }
+            h5{
+              width: 100%;
+              word-break: break-all;
+              line-height: 120%;
+            }
+          }
+        }
+      }
+    }
+    &__banner{
+      a{
+        opacity: 1;
+        transition: all 0.3s;
+        &:hover{
+          opacity: 0.7;
+        }
+        img{
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+// Fotter Style
+.footer{
+  width: 100%;
+  margin-top: 50px;
+  background-color: $black;
+  color: $white;
+  &__wrapper{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    .copy{
+      width: 100%;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  }
+  &__info{
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding-top: 50px;
+    @include clearfix;
+    li{
+      float: left;
+      width: 25%;
+      text-align: center;
+      list-style-type: none;
+      a{
+        display: inline-block;
+        width: 100%;
+        color: $white;
+        text-decoration: none;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  &__mission{
+    width: 100%;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: $h2Size;
+    font-weight: bold;
+    text-shadow: 0 0px 3px #2c2c2c;
+    color: $gray;
+  }
+  &__logo{
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+    img{
+      width: 60px;
+      height: auto;
+    }
+  }
+}
