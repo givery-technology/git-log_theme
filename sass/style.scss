@@ -1,3 +1,86 @@
+// Use reset
+@import 'reset';
 // Use Bourbon/NEAT
-@import "bourbon/bourbon";
-@import "neat/neat";
+@import "bourbon";
+@import "neat";
+
+$black: #2c2c2c;
+$white: #ffffff;
+$mainColor: #4f7bbe;
+
+// Default Setting
+html{
+  color: $black;
+}
+
+// Header Setting
+header{
+  @include outer-container(100%);
+  border-top: solid 5px $mainColor;
+}
+.header{
+  @include outer-container(1200px);
+  margin-top: 10px;
+  height: 100px;
+  margin-bottom: 50px;
+  &-logo{
+    @include span-columns(7);
+    a{
+      img{
+        width: auto;
+        height: 100px;
+      }
+    }
+  }
+  &-side{
+    @include span-columns(5);
+    height: 100px;
+    line-height: 100px;
+    text-align: right;
+    li{
+      display: inline-block;
+      list-style-type: none;
+      margin-left: 30px;
+      a{
+        display: inline-block;
+        width: 130px;
+        height: 50px;
+        line-height: 50px;
+        color: $mainColor;
+        text-decoration: none;
+        text-align: center;
+        transition: all 0.3s;
+        &:hover{
+          color: $white;
+          background-color: $mainColor;
+        }
+      }
+    }
+  }
+}
+
+// Main Contents Setting
+.wrapper{
+  @include outer-container(1200px);
+  .posts{
+    @include span-columns(9);
+    &-list{
+      @include clearfix;
+      margin-bottom: 30px;
+      .thumbnail{
+        width: 300px;
+        height: 200px;
+        img{
+          width: 300px;
+          height: auto;
+        }
+      }
+      &-info{
+        
+      }
+    }
+  }
+  .sidebar{
+    @include span-columns(3);
+  }
+}
