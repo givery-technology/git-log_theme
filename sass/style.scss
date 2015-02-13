@@ -1,3 +1,9 @@
+// Use reset
+@import 'reset';
 // Use Bourbon/NEAT
-@import "bourbon/bourbon";
-@import "neat/neat";
+@import "bourbon";
+@import "neat";
+
+// Each Page Style
+@import 'common';
+@import 'toppage';
