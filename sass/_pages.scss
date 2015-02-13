@@ -1,0 +1,16 @@
+.singlePost{
+  .thumbnail{
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+  .givery_mission{
+    width: 100%;
+    text-align: center;
+    text-shadow: 0 0 2px $gray;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 50px;
+  }
+}
