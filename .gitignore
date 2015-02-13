@@ -12,5 +12,5 @@ sass/bourbon
 sass/neat
 
 # Compile File
-css
+style.css
 script
