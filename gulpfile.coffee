@@ -42,6 +42,10 @@ gulp.task 'sass', ->
   .on('error', (err) ->
     console.error('Error', err.message)
   )
+  .pipe pleeease
+    minifier: false
+    autoprefixer:
+      "browsers": ["last 4 versions"]
   .pipe sourcemaps.write()
   .pipe gulp.dest(paths.style.css)
 
