@@ -34,6 +34,7 @@ gulp.task 'webserver', ->
 # ejs
 gulp.task 'ejs', ->
   gulp.src ['./*.ejs', '!' + './_*.ejs']
+    .pipe plumber()
     .pipe ejs()
     .pipe gulp.dest('./')
 
