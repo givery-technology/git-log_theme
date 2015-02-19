@@ -77,39 +77,39 @@
     float: right;
     background-color: $mainColor;
     position: relative;
-    .authorIcon{
-      box-sizing: border-box;
-      width: 190px;
-      height: 190px;
-      margin: 20px auto;
-      position: absolute;
-      margin-left: -100px;
-      margin-top: -20px;
-      border: solid 5px $mainColor;
-      border-radius:50%;
-      overflow: hidden;
-      img{
-        width: 180px;
-        height: auto;
-      }
+  }
+  &__authorIcon{
+    box-sizing: border-box;
+    width: 190px;
+    height: 190px;
+    margin: 20px auto;
+    position: absolute;
+    margin-left: -100px;
+    margin-top: -20px;
+    border: solid 5px $mainColor;
+    border-radius:50%;
+    overflow: hidden;
+    img{
+      width: 180px;
+      height: auto;
     }
-    .authorName{
-      margin-left: 110px;
-      font-size: $textSizeL;
-      color: $white;
-      margin-top: 20px;
-    }
-    .authorPosition{
-      margin-left: 110px;
-      margin-top: 10px;
-      color: $white;
-    }
-    .authorInfo{
-      line-height: 130%;
-      margin-left: 110px;
-      margin-top: 20px;
-      color: $white;
-    }
+  }
+  &__authorName{
+    margin-left: 110px;
+    font-size: $textSizeL;
+    color: $white;
+    margin-top: 20px;
+  }
+  &__authorPosition{
+    margin-left: 110px;
+    margin-top: 10px;
+    color: $white;
+  }
+  &__authorInfo{
+    line-height: 130%;
+    margin-left: 110px;
+    margin-top: 20px;
+    color: $white;
   }
 
   // FixedPage Style
