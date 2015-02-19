@@ -2,6 +2,9 @@ gulp = require 'gulp'
 webserver = require 'gulp-webserver'
 plumber = require 'gulp-plumber'
 
+# Use ejs
+ejs = require 'gulp-ejs'
+
 # Use Sass/Compass
 sass = require 'gulp-ruby-sass'
 sourcemaps = require 'gulp-sourcemaps'
@@ -28,6 +31,11 @@ gulp.task 'webserver', ->
       port: 3000
       # directoryListing: true
 
+# ejs
+gulp.task 'ejs', ->
+  gulp.src ['./*.ejs', '!' + './_*.ejs']
+    .pipe ejs()
+    .pipe gulp.dest('./')
 
 # Sass Compile
 # (doesn't support globs yet, only single files or directories.)
@@ -59,7 +67,8 @@ gulp.task 'coffee', () ->
 
 # Watch task
 gulp.task 'watch', ->
+  gulp.watch './*.ejs', ['ejs']
   gulp.watch paths.style.src, ['sass']
   gulp.watch paths.script.coffee, ['coffee']
 
-gulp.task 'default', ['webserver', 'watch', 'sass', 'coffee']
+gulp.task 'default', ['webserver', 'watch', 'ejs', 'sass', 'coffee']

@@ -4,6 +4,9 @@
 # npm
 node_modules
 
+# HTML
+*.html
+
 # Sass
 .sass-cache
 
