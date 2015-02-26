@@ -256,11 +256,11 @@ header{
       li{
         display: inline-block;
         list-style-type: none;
+        margin-right: 15px;
         time{
           font-size: $textSizeS;
         }
         span{
-          margin-left: 18px;
           margin-right: 5px;
           font-size: $textSizeS;
         }
@@ -345,11 +345,18 @@ header{
       width: 600px;
       height: auto;
     }
+    &--pages img{
+        width: 100%;
+        height: auto;
+    }
   }
   &__body{
+    font-size: $textSize;
     line-height: 180%;
     word-break: break-all;
     h3{
+      display: block;
+      margin-top: 20px;
       margin-bottom: 20px;
       padding-bottom: 5px;
       border-bottom: solid 3px $mainColor;
@@ -357,6 +364,7 @@ header{
       font-size: $h3Size;
     }
     h4{
+      margin-top: 20px;
       margin-bottom: 20px;
       padding-bottom: 5px;
       border-bottom: solid 3px $gray;
@@ -364,6 +372,7 @@ header{
       font-size: $textSizeL;
     }
     p{
+      display: inline-block;
       margin-bottom: 20px;
     }
   }
