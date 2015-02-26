@@ -1,5 +1,10 @@
 // Use reset
 @import 'reset';
+
+// Use Bootstrap (Use Font & Pager)
+@import 'bootstrap/bootstrap';
+@import 'bootstrap/bootstrap-theme';
+
 // Use Bourbon/NEAT
 @import "bourbon";
 @import "neat";
@@ -415,4 +420,16 @@ header{
     margin-bottom: 50px;
   }
 
+}
+
+// notFound Page Style
+.notFound{
+  @include span-columns(9);
+  &__title{
+    font-size: $h3Size;
+    margin-bottom: 20px;
+  }
+  &__body{
+    font-size: $textSize;
+  }
 }
