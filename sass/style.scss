@@ -4,7 +4,415 @@
 @import "bourbon";
 @import "neat";
 
-// Each Page Style
-@import 'common';
-@import 'toppage';
-@import 'single';
+// Setting Colors
+$black: #3c3c3c;
+$gray: #949494;
+$white: #ffffff;
+$mainColor: #4f7bbe;
+$subColor: #3263a5;
+
+// Setting Font
+$h2Size: 25px;
+$h3Size: 22px;
+$textSizeL: 20px;
+$textSize: 17px;
+$textSizeS: 13px;
+$font: Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+// Default Setting
+html{
+  color: $black;
+  font-size: $textSize;
+  font-family: $font;
+  a{
+    color: $mainColor;
+  }
+}
+
+// Header Style
+header{
+  @include outer-container(100%);
+  border-top: solid 5px $mainColor;
+}
+.header{
+  @include outer-container(1200px);
+  margin-top: 10px;
+  height: 100px;
+  margin-bottom: 50px;
+  &__logo{
+    @include span-columns(7);
+    a{
+      img{
+        width: auto;
+        height: 100px;
+      }
+    }
+  }
+  &__side{
+    @include span-columns(5);
+    height: 100px;
+    line-height: 100px;
+    text-align: right;
+    li{
+      display: inline-block;
+      list-style-type: none;
+      margin-left: 30px;
+      a{
+        display: inline-block;
+        width: 130px;
+        height: 50px;
+        line-height: 50px;
+        color: $mainColor;
+        text-decoration: none;
+        text-align: center;
+        transition: all 0.3s;
+        &:hover{
+          color: $white;
+          background-color: $mainColor;
+        }
+      }
+    }
+  }
+}
+
+// Page Size
+.wrapper{
+  @include outer-container(1200px);
+}
+
+// SideBar Style
+.sidebar{
+  @include span-columns(3);
+  &__contents{
+    margin-bottom: 30px;
+    padding: 10px;
+    border: solid 1px $gray;
+    h4{
+      font-size: $textSizeL;
+      text-align: center;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: solid 1px $gray;
+    }
+  }
+  &__list{
+    li{
+      list-style-position: inside;
+      list-style-type: none;
+    }
+    &--recommend{
+      li{
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: solid 1px $gray;
+        &:last-child{
+          border: none;
+        }
+        a{
+          display: inline-block;
+          transition: all 0.3s;
+          opacity: 1;
+          &:hover{
+            opacity: 0.7;
+          }
+          .thumbnail{
+            margin-bottom: 5px;
+            img{
+              width: 100%;
+              height: auto;
+            }
+          }
+          h5{
+            width: 100%;
+            word-break: break-all;
+            line-height: 120%;
+          }
+        }
+      }
+    }
+  }
+  &__banner{
+    a{
+      opacity: 1;
+      transition: all 0.3s;
+      &:hover{
+        opacity: 0.7;
+      }
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+// Fotter Style
+.footer{
+  width: 100%;
+  margin-top: 50px;
+  background-color: $black;
+  color: $white;
+  &__wrapper{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    .copy{
+      width: 100%;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  }
+  &__info{
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding-top: 50px;
+    @include clearfix;
+    li{
+      float: left;
+      width: 25%;
+      text-align: center;
+      list-style-type: none;
+      a{
+        display: inline-block;
+        width: 100%;
+        color: $white;
+        text-decoration: none;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  &__mission{
+    width: 100%;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: $h2Size;
+    font-weight: bold;
+    text-shadow: 0 0px 3px #2c2c2c;
+    color: $gray;
+  }
+  &__logo{
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+    img{
+      width: 60px;
+      height: auto;
+    }
+  }
+}
+
+// TopPage Contents Style
+.mainPosts{
+  @include span-columns(9);
+  // TopPage Post Item
+  &__list{
+    @include outer-container(inherit);
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: solid 1px $gray;
+    &:last-child{
+      border: none;
+    }
+  }
+  &__left{
+    @include span-columns(6);
+    text-align: center;
+    img{
+      width: 80%;
+      height: auto;
+    }
+  }
+  // TopPage Post Info
+  &__right{
+    @include span-columns(6);
+    margin-left: -15px;
+    margin-top: 15px;
+    h2{
+      margin-bottom: 20px;
+      a{
+        display: inline-block;
+        width: 100%;
+        line-height: 130%;
+        font-size: $h2Size;
+        font-weight: bold;
+        word-break: break-all;
+        color: $black;
+        text-decoration: none;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+    ul{
+      margin-bottom: 10px;
+      li{
+        display: inline-block;
+        list-style-type: none;
+        time{
+          font-size: $textSizeS;
+        }
+        span{
+          margin-left: 18px;
+          margin-right: 5px;
+          font-size: $textSizeS;
+        }
+        a{
+          font-size: $textSizeS;
+          text-decoration: none;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .readmore{
+      display: inline-block;
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      margin-top: 20px;
+      border: solid 2px $mainColor;
+      border-radius: 8px;
+      background-color: $white;
+      color: $mainColor;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.3s;
+      &:hover{
+        color: $white;
+        background-color: $mainColor;
+      }
+    }
+  }
+}
+
+// Single Page & Fixed Page Style
+.singlePost{
+  @include span-columns(9);
+  &__postTitle{
+    width: 100%;
+    line-height: 150%;
+    margin-bottom: 20px;
+    font-size: $h2Size;
+    word-break: break-all;
+  }
+
+  &__info{
+    margin-bottom: 20px;
+    time{
+      width: 100%;
+      font-size: $textSizeL;
+    }
+    .author{
+      margin-bottom: 10px;
+      font-size: $textSize;
+      a{
+        text-decoration: none;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+    .categories{
+      display: block;
+      li{
+        display: inline-block;
+        a{
+          margin-right: 10px;
+          text-decoration: none;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  .thumbnail{
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    text-align: center;
+    img{
+      width: 600px;
+      height: auto;
+    }
+  }
+  &__body{
+    line-height: 180%;
+    word-break: break-all;
+    h3{
+      margin-bottom: 20px;
+      padding-bottom: 5px;
+      border-bottom: solid 3px $mainColor;
+      text-indent: 0.5em;
+      font-size: $h3Size;
+    }
+    h4{
+      margin-bottom: 20px;
+      padding-bottom: 5px;
+      border-bottom: solid 3px $gray;
+      text-indent: 0.5em;
+      font-size: $textSizeL;
+    }
+    p{
+      margin-bottom: 20px;
+    }
+  }
+  &__author{
+    width: 90%;
+    height: 150px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    float: right;
+    background-color: $mainColor;
+    position: relative;
+  }
+  &__authorIcon{
+    box-sizing: border-box;
+    width: 190px;
+    height: 190px;
+    margin: 20px auto;
+    position: absolute;
+    margin-left: -100px;
+    margin-top: -20px;
+    border: solid 5px $mainColor;
+    border-radius:50%;
+    overflow: hidden;
+    img{
+      width: 180px;
+      height: auto;
+    }
+  }
+  &__authorName{
+    margin-left: 110px;
+    font-size: $textSizeL;
+    color: $white;
+    margin-top: 20px;
+  }
+  &__authorPosition{
+    margin-left: 110px;
+    margin-top: 10px;
+    color: $white;
+  }
+  &__authorInfo{
+    line-height: 130%;
+    margin-left: 110px;
+    margin-top: 20px;
+    color: $white;
+  }
+
+  // FixedPage Style
+  .giveryMission{
+    width: 100%;
+    text-align: center;
+    text-shadow: 0 0 2px $gray;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 50px;
+  }
+
+}
