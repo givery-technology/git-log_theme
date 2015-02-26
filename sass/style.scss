@@ -55,26 +55,29 @@ header{
   }
   &__side{
     @include span-columns(5);
-    height: 100px;
-    line-height: 100px;
     text-align: right;
-    li{
-      display: inline-block;
-      list-style-type: none;
-      margin-left: 30px;
-      a{
-        display: inline-block;
-        width: 130px;
-        height: 50px;
-        line-height: 50px;
+    margin-top: 50px;
+  }
+  &__search{
+    input{
+      width: 240px;
+      height: 40px;
+      margin-right: -3px;
+      border: solid 1px $mainColor;
+      border-right: none;
+      border-radius: 10px 0 0 10px;
+    }
+    button{
+      width: 40px;
+      height: 40px;
+      border: solid 1px $mainColor;
+      border-radius: 0 8px 8px 0;
+      background-color: $mainColor;
+      color: $white;
+      transition: all 0.3s;
+      &:hover{
+        background-color: $white;
         color: $mainColor;
-        text-decoration: none;
-        text-align: center;
-        transition: all 0.3s;
-        &:hover{
-          color: $white;
-          background-color: $mainColor;
-        }
       }
     }
   }
@@ -175,7 +178,7 @@ header{
     @include clearfix;
     li{
       float: left;
-      width: 25%;
+      width: 33.3%;
       text-align: center;
       list-style-type: none;
       a{
@@ -226,7 +229,7 @@ header{
     @include span-columns(6);
     text-align: center;
     img{
-      width: 80%;
+      width: 90%;
       height: auto;
     }
   }
@@ -256,11 +259,11 @@ header{
       li{
         display: inline-block;
         list-style-type: none;
+        margin-right: 15px;
         time{
           font-size: $textSizeS;
         }
         span{
-          margin-left: 18px;
           margin-right: 5px;
           font-size: $textSizeS;
         }
@@ -336,7 +339,7 @@ header{
       }
     }
   }
-  .thumbnail{
+  &__thumbnail{
     width: 100%;
     margin-top: 40px;
     margin-bottom: 50px;
@@ -345,11 +348,18 @@ header{
       width: 600px;
       height: auto;
     }
+    &--pages img{
+        width: 100%;
+        height: auto;
+    }
   }
   &__body{
+    font-size: $textSize;
     line-height: 180%;
     word-break: break-all;
     h3{
+      display: block;
+      margin-top: 20px;
       margin-bottom: 20px;
       padding-bottom: 5px;
       border-bottom: solid 3px $mainColor;
@@ -357,6 +367,7 @@ header{
       font-size: $h3Size;
     }
     h4{
+      margin-top: 20px;
       margin-bottom: 20px;
       padding-bottom: 5px;
       border-bottom: solid 3px $gray;
@@ -364,6 +375,7 @@ header{
       font-size: $textSizeL;
     }
     p{
+      display: inline-block;
       margin-bottom: 20px;
     }
   }

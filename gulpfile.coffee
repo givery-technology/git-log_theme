@@ -68,7 +68,7 @@ gulp.task 'coffee', () ->
 
 # Watch task
 gulp.task 'watch', ->
-  gulp.watch './*.ejs', ['ejs']
+  gulp.watch './ejs/*.ejs', ['ejs']
   gulp.watch paths.style.src, ['sass']
   gulp.watch paths.script.coffee, ['coffee']
 
