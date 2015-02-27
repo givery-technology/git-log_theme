@@ -22,7 +22,7 @@
             <li>
               <span class="glyphicon glyphicon-user"></span>
               <span>Author</span>
-              <a href="#"><?php the_author_meta("display_name"); ?></a>
+              <span><?php the_author_meta("display_name"); ?></span>
             </li>
           </ul>
           <ul class="categories">
