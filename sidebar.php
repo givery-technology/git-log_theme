@@ -1,0 +1,19 @@
+
+    <aside class="sidebar">
+      <section class="sidebar__contents">
+        <h4>GiTLog 人気記事</h4>
+        <ul class="sidebar__list sidebar__list--recommend">
+          <li>
+            <a href="#">
+              <div class="thumbnail"><img src="images/thumbnail.png" alt=""></div>
+              <h5>[SLab.]CSSを爆速コーディング！今すぐ始められる「Sass」＆「Compass」入門！【Compass入門編】</h5>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <div class="sidebar__banner">
+        <a href="#">
+          <img src="images/banner-sample.png" alt="banner-sample">
+        </a>
+      </div>
+    </aside>
