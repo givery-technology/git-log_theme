@@ -21,6 +21,16 @@
       <p class="copy">Copyright &copy; 2015 Givery.inc All Rights Reserved.</p>
     </div>
   </footer>
+  <div id="fb-root"></div>
+    <script>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=954478067901445&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
 <?php wp_footer(); ?>
 </body>
 </html>

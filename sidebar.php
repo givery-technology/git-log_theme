@@ -21,9 +21,4 @@
           ?>
         </ul>
       </section>
-      <div class="sidebar__banner">
-        <a href="#">
-          <img src="images/banner-sample.png" alt="banner-sample">
-        </a>
-      </div>
     </aside>
