@@ -303,6 +303,58 @@ header{
       }
     }
   }
+  &__categories{
+    float: left;
+  }
+  &__socialCount{
+    margin-left: 20px;
+    float: left;
+    &__twitter{
+      font-size: $textSize;
+      margin-right: 8px;
+      i{
+        margin-right: 4px;
+      }
+    }
+    &__facebook{
+      font-size: $textSize;
+      margin-right: 8px;
+      i{
+        margin-right: 4px;
+      }
+    }
+  }
+  &__pageNavi{
+    text-align: center;
+    .wp-pagenavi{
+      span,
+      a{
+        display: inline-block;
+        line-height: 30px;
+        padding: 10px 20px 10px 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 8px;
+      }
+      .current,
+      .nextpostslink,
+      .previouspostslink,
+      .first,
+      .last{
+        background-color: $mainColor;
+        color: $white;
+      }
+      .page{
+        background-color: $white;
+        color: $mainColor;
+        transition: all 0.3s;
+        &:hover{
+          background-color: $mainColor;
+          color: $white;
+        }
+      }
+    }
+  }
 }
 
 // Single Page & Fixed Page Style
@@ -358,6 +410,29 @@ header{
     &--pages img{
         width: 100%;
         height: auto;
+    }
+  }
+  &__social{
+    @include clearfix;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    &__twitter{
+      float: left;
+      margin-left: 50px;
+    }
+    &__facebook{
+      float: left;
+      margin-left: 50px;
+    }
+    &__google{
+      float: left;
+      margin-left: 50px;
+    }
+    &__hatena{
+      float: left;
+      margin-left: 50px;
     }
   }
   &__body{

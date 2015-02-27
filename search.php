@@ -20,19 +20,26 @@
             <li>
               <span class="glyphicon glyphicon-user"></span>
               <span>Author</span>
-              <span><?php the_author_meta("display_name"); ?></span>
+              <span><?php the_author_posts_link(); ?></span>
             </li>
           </ul>
-          <ul class="categories">
+          <ul class="mainPosts__categories">
             <li>
               <span class="glyphicon glyphicon-bookmark"></span>
             </li>
             <li><?php the_category(" "); ?></li>
           </ul>
+          <div class="mainPosts__socialCount">
+            <span class="mainPosts__socialCount__twitter"><i class="fa fa-twitter"></i><?php if(function_exists('get_scc_twitter')) echo get_scc_twitter(); ?></span>
+            <span class="mainPosts__socialCount__facebook"><i class="fa fa-facebook-official"></i><?php if(function_exists('get_scc_facebook')) echo get_scc_facebook(); ?></span>
+          </div>
           <a class="readmore" href="<?php the_permalink(); ?>">Read More.</a>
         </div>
       </article>
       <?php endwhile; ?>
+      <nav class="mainPosts__pageNavi">
+        <?php if(function_exists('wp_pagenavi')) { wp_pagenavi(); } ?>
+      </nav>
     </section>
 <?php else: ?>
   <article class="notFound">
