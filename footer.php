@@ -8,9 +8,9 @@
   <footer class="footer">
     <div class="footer__wrapper">
       <ul class="footer__info">
-        <li><a href="#">会社情報</a></li>
-        <li><a href="#">GiTについて</a></li>
-        <li><a href="#">採用情報</a></li>
+        <li><a href="http://givery.co.jp/" target="_brank">会社情報</a></li>
+        <li><a href="https://www.wantedly.com/companies/givery_technology" target="_brank">GiTについて</a></li>
+        <li><a href="https://www.wantedly.com/companies/givery_technology/projects" target="_brank">採用情報</a></li>
       </ul>
       <div class="footer__mission">
         Your Growth, Our Future.
