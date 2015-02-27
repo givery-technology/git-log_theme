@@ -1,14 +1,24 @@
-
+<?php
+/**
+ * @package git-log_theme
+ */
+?>
     <aside class="sidebar">
       <section class="sidebar__contents">
         <h4>GiTLog 人気記事</h4>
+        <?php if (have_posts()) : query_posts('posts_per_page=5&orderby=rand'); ?>
         <ul class="sidebar__list sidebar__list--recommend">
+          <?php while (have_posts()) : the_post(); ?>
           <li>
-            <a href="#">
-              <div class="thumbnail"><img src="images/thumbnail.png" alt=""></div>
-              <h5>[SLab.]CSSを爆速コーディング！今すぐ始められる「Sass」＆「Compass」入門！【Compass入門編】</h5>
+            <a href="<?php the_permalink(); ?>">
+              <div class="thumbnail"><?php the_post_thumbnail(); ?></div>
+              <h5><?php the_title(); ?></h5>
             </a>
           </li>
+          <?php
+              endwhile;
+            endif;
+          ?>
         </ul>
       </section>
       <div class="sidebar__banner">

@@ -58,10 +58,11 @@ header{
     input{
       width: 240px;
       height: 40px;
-      margin-right: -3px;
+      margin-right: -5px;
       border: solid 1px $mainColor;
       border-right: none;
       border-radius: 10px 0 0 10px;
+      vertical-align: top;
     }
     button{
       width: 40px;
@@ -255,7 +256,7 @@ header{
       li{
         display: inline-block;
         list-style-type: none;
-        margin-right: 15px;
+        margin-right: 5px;
         time{
           font-size: $textSizeS;
         }
