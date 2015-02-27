@@ -11,7 +11,7 @@
         <div class="author">
           <span class="glyphicon glyphicon-user"></span>
           <span>Author</span>
-          <span><?php the_author_meta("display_name"); ?></span>
+          <span><?php the_author_posts_link(); ?></span>
         </div>
         <ul class="categories">
           <li>
