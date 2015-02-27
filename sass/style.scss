@@ -1,13 +1,19 @@
 // Use reset
 @import 'reset';
 
-// Use Bootstrap (Use Font & Pager)
-@import 'bootstrap/bootstrap';
-@import 'bootstrap/bootstrap-theme';
-
 // Use Bourbon/NEAT
 @import "bourbon";
 @import "neat";
+
+// Use Koruri Font
+@font-face {
+    font-family: 'Koruri Regular';
+    src: url('./fonts/Koruri-Regular-sub.eot');
+    src: url('./fonts/Koruri-Regular-sub.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/Koruri-Regular-sub.woff') format('woff'),
+    url('./fonts/Koruri-Regular-sub.ttf') format('truetype');
+}
+
 
 // Setting Colors
 $black: #3c3c3c;
@@ -22,10 +28,11 @@ $h3Size: 22px;
 $textSizeL: 20px;
 $textSize: 17px;
 $textSizeS: 13px;
-$font: Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+$font: 'Koruri Regular', Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 
 // Default Setting
-html{
+html,
+body{
   color: $black;
   font-size: $textSize;
   font-family: $font;
@@ -62,10 +69,11 @@ header{
     input{
       width: 240px;
       height: 40px;
-      margin-right: -3px;
+      margin-right: -5px;
       border: solid 1px $mainColor;
       border-right: none;
       border-radius: 10px 0 0 10px;
+      vertical-align: top;
     }
     button{
       width: 40px;
@@ -259,12 +267,11 @@ header{
       li{
         display: inline-block;
         list-style-type: none;
-        margin-right: 15px;
+        margin-right: 5px;
         time{
           font-size: $textSizeS;
         }
         span{
-          margin-right: 5px;
           font-size: $textSizeS;
         }
         a{
@@ -442,6 +449,20 @@ header{
     margin-bottom: 20px;
   }
   &__body{
+    font-size: $textSize;
+  }
+}
+.search{
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  line-height: 30px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: $mainColor;
+  &__result{
+    color: $white;
     font-size: $textSize;
   }
 }
