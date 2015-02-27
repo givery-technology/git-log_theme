@@ -5,6 +5,16 @@
 @import "bourbon";
 @import "neat";
 
+// Use Koruri Font
+@font-face {
+    font-family: 'Koruri Regular';
+    src: url('./fonts/Koruri-Regular-sub.eot');
+    src: url('./fonts/Koruri-Regular-sub.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/Koruri-Regular-sub.woff') format('woff'),
+    url('./fonts/Koruri-Regular-sub.ttf') format('truetype');
+}
+
+
 // Setting Colors
 $black: #3c3c3c;
 $gray: #949494;
@@ -18,10 +28,11 @@ $h3Size: 22px;
 $textSizeL: 20px;
 $textSize: 17px;
 $textSizeS: 13px;
-$font: Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+$font: 'Koruri Regular', Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 
 // Default Setting
-html{
+html,
+body{
   color: $black;
   font-size: $textSize;
   font-family: $font;
@@ -261,7 +272,6 @@ header{
           font-size: $textSizeS;
         }
         span{
-          margin-right: 5px;
           font-size: $textSizeS;
         }
         a{
