@@ -4,7 +4,7 @@
       <?php
         if(is_home()):
           $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-          query_posts('posts_per_page=2&paged='.$paged);
+          query_posts('posts_per_page=20&paged='.$paged);
           if(have_posts()):
             while (have_posts()):
                 the_post();
@@ -56,7 +56,7 @@
       </div>
       <?php
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-        query_posts('posts_per_page=20&'.$query_string.'&paged='.$paged);
+        query_posts('posts_per_page=200&'.$query_string.'&paged='.$paged);
         if(have_posts()):
           while (have_posts()) : the_post();
       ?>
@@ -104,7 +104,7 @@
       </div>
       <?php
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-        query_posts('posts_per_page=20&'.$query_string.'&paged='.$paged);
+        query_posts('posts_per_page=200&'.$query_string.'&paged='.$paged);
         if(have_posts()):
           while (have_posts()) : the_post();
       ?>
