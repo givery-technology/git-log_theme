@@ -5,7 +5,7 @@
 ?>
   </div><!-- /.warpper -->
 
-  <footer class="footer">
+  <footer id="footer" class="footer">
     <div class="footer__wrapper">
       <ul class="footer__info">
         <li><a href="http://givery.co.jp/" target="_brank">会社情報</a></li>
